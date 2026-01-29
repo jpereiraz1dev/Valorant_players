@@ -1,0 +1,28 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria de Itens</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="/">Valorant Players</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'index'%}">Home</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Cadastro</a></li>
+            <li><a href="">Logout</a></li>
+        </ul>
+    </nav>
+
+    {% block content %} {% endblock %}
+</body>
+
+</html>

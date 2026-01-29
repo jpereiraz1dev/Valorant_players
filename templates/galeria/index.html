@@ -1,0 +1,35 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div class="container">
+
+    <!-- ITEM -->
+    <a href="{% url 'player' %}" class="card">
+        <div class="foto">
+            <img src="{% static 'media/less.jpg' %}" alt="Foto do item">
+        </div>
+
+        <div class="info">
+            <h3>Less</h3>
+            <p><strong>Time:</strong> KRU</p>
+            <p><strong>Função:</strong> Sentinela</p>
+        </div>
+    </a>
+
+    <!-- ITEM -->
+    <a href="{% url 'player' %}" class="card">
+        <div class="foto">
+            <img src="{% static 'media/aspas.jpg' %}" alt="Aspas">
+        </div>
+
+        <div class="info">
+            <h3>Aspas</h3>
+            <p><strong>Time:</strong> MIBR</p>
+            <p><strong>Função:</strong> Duelista</p>
+        </div>
+    </a>
+
+</div>
+{% endblock %}
+

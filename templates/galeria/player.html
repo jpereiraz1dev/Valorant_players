@@ -1,0 +1,64 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="player-container">
+
+    <!-- FOTO + DADOS -->
+    <div class="player-header">
+
+        <div class="player-foto">
+            <img src="{% static 'media/less.jpg' %}" alt="Less">
+        </div>
+
+        <div class="player-main-info">
+            <h1>Less</h1>
+
+            <p><strong>Função:</strong> Sentinela</p>
+            <p><strong>Time atual:</strong> KRU</p>
+
+            <div class="player-times">
+                <strong>Carreira:</strong>
+                <span>LOUD → Team Vitality → KRU</span>
+
+                <!-- BOTÃO -->
+                <a href="" class="btn-small">+ Adicionar Time</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TÍTULOS -->
+    <div class="player-titles">
+        <div class="titles-header">
+            <h2>Títulos Conquistados</h2>
+            <a href="" class="btn-small">+ Adicionar Título</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ano</th>
+                    <th>Título</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2021</td>
+                    <td>Campeonato Nacional</td>
+                    <td>LOUD</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Copa Internacional</td>
+                    <td>KRU</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="{% url 'index' %}" class="btn-voltar">← Voltar</a>
+
+</div>
+{% endblock %}
