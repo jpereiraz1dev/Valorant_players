@@ -9,18 +9,18 @@
     <div class="player-header">
 
         <div class="player-foto">
-            <img src="{% static 'media/less.jpg' %}" alt="Less">
+            <img src="{% static 'media/' %}{{player.foto}}" alt="{{player.nickname}}">
         </div>
 
         <div class="player-main-info">
-            <h1>Less</h1>
+            <h1>{{player.nickname}}</h1>
 
-            <p><strong>Função:</strong> Sentinela</p>
-            <p><strong>Time atual:</strong> KRU</p>
+            <p><strong>Função:</strong> {{player.role}}</p>
+            <p><strong>Time atual:</strong> {{player.team}}</p>
 
             <div class="player-times">
                 <strong>Carreira:</strong>
-                <span>LOUD → Team Vitality → KRU</span>
+                <span></span>
 
                 <!-- BOTÃO -->
                 <a href="" class="btn-small">+ Adicionar Time</a>

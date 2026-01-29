@@ -4,5 +4,5 @@ from galeria.views import index,player
 
 urlpatterns = [
     path('',index, name='index'),
-    path('player/',player, name='player'),
+    path('player/<int:player_id>',player, name='player'),
 ]

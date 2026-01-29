@@ -5,31 +5,23 @@
 <div class="container">
 
     <!-- ITEM -->
-    <a href="{% url 'player' %}" class="card">
+     {% if dados %}
+     {% for player in dados %}
+    <a href="{% url 'player' player.id%}" class="card">
         <div class="foto">
-            <img src="{% static 'media/less.jpg' %}" alt="Foto do item">
+            <img src="{% static 'media/' %}{{player.foto}}" alt="Foto do item">
         </div>
 
         <div class="info">
-            <h3>Less</h3>
-            <p><strong>Time:</strong> KRU</p>
-            <p><strong>Função:</strong> Sentinela</p>
+            <h3>{{player.nickname}}</h3>
+            <p><strong>Time:</strong> {{player.team}}</p>
+            <p><strong>Função:</strong> {{player.role}}</p>
         </div>
     </a>
+    {% endfor %}
+    {% else %}
+    {% endif %}
 
-    <!-- ITEM -->
-    <a href="{% url 'player' %}" class="card">
-        <div class="foto">
-            <img src="{% static 'media/aspas.jpg' %}" alt="Aspas">
-        </div>
 
-        <div class="info">
-            <h3>Aspas</h3>
-            <p><strong>Time:</strong> MIBR</p>
-            <p><strong>Função:</strong> Duelista</p>
-        </div>
-    </a>
-
-</div>
 {% endblock %}
 
